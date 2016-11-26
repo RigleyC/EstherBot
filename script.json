@@ -1,7 +1,7 @@
 {
-    "OI": "Oi, tudo bem? \n![rigley](https://raw.githubusercontent.com/RigleyC/RigleyBot/master/img/6tag_181016-102340.jpg) \nMeu nome é RigleyBot. Fui criado para ajudar você a conhecer Rigley melhor. \n Então vamos começar! Escolha uma categoria abaixo: \n %[carreira](Carreira) \n %[cursos](Cursos) \n %[vida em geral](Vida em geral) \n %[habilidades]",
+    "OI": "Oi, tudo bem? \n![rigley](https://raw.githubusercontent.com/RigleyC/RigleyBot/master/img/6tag_181016-102340.jpg) \nMeu nome é RigleyBot. Fui criado para ajudar você a conhecer Rigley melhor. \n Então vamos começar! Escolha uma categoria abaixo: \n %[carreira](postback:carreira_rpc) \n %[cursos](Cursos) \n %[vida em geral](Vida em geral) \n %[habilidades]",
     "TUDO BEM?": "Estou bem, obrigado!",
-    "CARREIRA": "Bom, é um pouco complicado falar disso, como falo na educação ele é novo e isso complica conseguir emprego, uma das poucas experiências que ele teve foi como Monitor de Informática na escola onde fez Ensino Médio, atualmente ele apenas estuda na faculdade Devry São Luís[carreira1](postback:carreira)",
+    "CARREIRA": "Bom, é um pouco complicado falar disso, como falo na educação ele é novo e isso complica conseguir emprego, uma das poucas experiências que ele teve foi como Monitor de Informática na escola onde fez Ensino Médio, atualmente ele apenas estuda na faculdade Devry São Luís %[carreira_rpc]",
     
     "CONNECT ME": "",
     "DISCONNECT": ""
