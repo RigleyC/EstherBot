@@ -1,7 +1,11 @@
 {
-    "OI": "Oi, tudo bem? \n![rigley](https://raw.githubusercontent.com/RigleyC/RigleyBot/master/img/6tag_181016-102340.jpg) \nMeu nome é RigleyBot. Fui criado para ajudar você a conhecer Rigley melhor. \n Então vamos começar! Escolha uma categoria abaixo: \n %[carreira](postback:carreira_rpc) \n %[cursos](Cursos) \n %[vida em geral](Vida em geral) \n %[habilidades]",
+    "OI": "Oi, tudo bem? \n![rigley](https://raw.githubusercontent.com/RigleyC/RigleyBot/master/img/6tag_181016-102340.jpg) \nMeu nome é RigleyBot. Fui criado para ajudar você a conhecer Rigley melhor. \n Então vamos começar! Escolha uma categoria abaixo: \n %[Carreira](postback:carreira_rpc) \n %[Cursos](postback:Cursos) \n %[Linguas](postback:Linguas) \n %[Emprego](postback:Emprego) \n %[Escolaridade](postback:Escola)",
     "TUDO BEM?": "Estou bem, obrigado!",
     "CARREIRA": "Bom, é um pouco complicado falar disso, como falo na educação ele é novo e isso complica conseguir emprego, uma das poucas experiências que ele teve foi como Monitor de Informática na escola onde fez Ensino Médio, atualmente ele apenas estuda na faculdade Devry São Luís %[carreira_rpc]",
+    "CURSOS": "Como ele não trabalha acaba sobrando um tempo livre então ele procura fazer cursos e está sempre pesquisando novidades na área de T.I. \nHoje ele tem cursos de: \n - Gestão de Riscos em T.I. \n- ITIL - Introdução a Biblioteca.\n- Fundamentos de Redes.\n- Montagem e Manutenção de Computadores. %[Cursos]",
+    "LINGUA": "Bom, atualmente ele está fazendo um curso de inglês na própria faculdade, além disso ele busca sempre melhorar sua fluência, entendimento e etc. Ele entende o básico, consegue desenvolver alguns diálogos, entender textos de modo geral e está ficando cada vez melhor. %[Linguas] ",
+    "EMPREGO": "Bom, é um pouco complicado falar disso, como falo na educação ele é novo e isso complica conseguir emprego, uma das poucas experiências que ele teve foi como Monitor de Informática na escola onde fez Ensino Médio, atualmente ele apenas estuda na faculdade Devry São Luís. %[Emprego]",
+    "ESCOLARIDADE": "Bom ele sempre gostou de ler, sempre foi muito curioso e com a influência dos pais que são professores isso acabou ficando mais forte e consequentemente ele acabou o Ensino Médio aos 14 anos e logo em seguida entrou logo na faculdade no curso de Gestão de T.I. %[Escola]",
     
     "CONNECT ME": "",
     "DISCONNECT": ""
