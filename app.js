@@ -18,7 +18,7 @@ app.get('/', function(req, res) {
 function persistentMenu(sender){
  request({
     url: 'https://graph.facebook.com/v2.6/me/thread_settings',
-    qs: {access_token:'EAAPdujJRHJcBAGuTBZCQYQ773GEa6izIu05CZAc95yIGlEWAp65cdQTmT800W2hc75ox4bOc7YGSeGSgj28Coh2XuVqWnSdqmjhnTy9M4GgZBjrBXipqRPSzZAHANaXsZALxncYpG6PFvhT5y0Ec19c9GcfUpEuq96sid1OhEsQZDZD'},
+    qs: {access_token:'2d6079f1d960db14c64d681d47b0d8d132be673e'},
     method: 'POST',
     json:{
         setting_type : "call_to_actions",
