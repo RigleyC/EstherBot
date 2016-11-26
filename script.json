@@ -1,6 +1,7 @@
 {
-    "OI": "Oi, tudo bem? \n![rigley](https://raw.githubusercontent.com/RigleyC/RigleyBot/master/img/6tag_181016-102340.jpg)",
+    "OI": "Oi, tudo bem? \n![rigley](https://raw.githubusercontent.com/RigleyC/RigleyBot/master/img/6tag_181016-102340.jpg) \nMeu nome é RigleyBot. Fui criado para ajudar você a conhecer Rigley melhor. \n Então vamos começar! Escolha uma categoria abaixo: \n %[carreira1] \n%[cursos]\n %[vida em geral] \n%[habilidades]",
     "TUDO BEM?": "Estou bem, obrigado!",
+    "CARREIRA": "Bom, é um pouco complicado falar disso, como falo na educação ele é novo e isso complica conseguir emprego, uma das poucas experiências que ele teve foi como Monitor de Informática na escola onde fez Ensino Médio, atualmente ele apenas estuda na faculdade Devry São Luís[carreira](postback:carreira1",
     
     "CONNECT ME": "",
     "DISCONNECT": ""
