@@ -17,8 +17,8 @@ app.get('/', function(req, res) {
 
 function persistentMenu(sender){
  request({
-    url: 'https://graph.facebook.com/v2.6/me/thread_settings',
-    qs: {access_token:'2d6079f1d960db14c64d681d47b0d8d132be673e'},
+    //url: 'https://graph.facebook.com/v2.6/me/thread_settings',
+    //qs: {access_token:'2d6079f1d960db14c64d681d47b0d8d132be673e'},
     method: 'POST',
     json:{
         setting_type : "call_to_actions",
