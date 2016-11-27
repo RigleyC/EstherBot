@@ -81,8 +81,47 @@ if (process.env.SERVICE_URL) {
 app.post('/webhook', function(req, res, next) {
     var isPostback = req.body.trigger == "postback";
     var msg = '';
-//---------------------------------------------
-let messaging_events = req.body.entry[0].messaging
+//----------------------------------------
+    const appUser = req.body.appUser;
+    const userId = appUser.userId || appUser._id;
+    const stateMachine = new StateMachine({
+        script,
+        bot: new BetterSmoochApiBot({
+            name,
+            avatarUrl,
+            lock,
+            store,
+            userId
+        })
+    });    
+
+    if(!isPostback) {
+        const messages = req.body.messages.reduce((prev, current) => {
+            if (current.role === 'appUser') {
+                prev.push(current);
+            }
+            return prev;
+        }, []);
+
+        if (messages.length === 0 && !isTrigger) {
+            return res.end();
+        }
+
+        msg = messages[0];
+    } else {
+        msg = req.body.postbacks[0];
+        msg.text = msg.action.text;
+    }
+
+    stateMachine.receiveMessage(msg)
+        .then(() => res.end())
+        .catch((err) => {
+            console.error('SmoochBot error:', err);
+            console.error(err.stack);
+            res.end();
+        });
+//----------------------------------------------------------------
+	let messaging_events = req.body.entry[0].messaging
 	for (let i = 0; i < messaging_events.length; i++) {
 		let event = req.body.entry[0].messaging[i]
 		let sender = event.sender.id
@@ -103,8 +142,6 @@ let messaging_events = req.body.entry[0].messaging
 	res.sendStatus(200)
 })
 
-	
-//---------------------------------------------	
 function sendGenericMessage(sender) {
 	let messageData = {
 		"attachment": {
@@ -153,49 +190,8 @@ function sendGenericMessage(sender) {
 		}
 	})
 }
-
-//----------------------------------------
-    const appUser = req.body.appUser;
-    const userId = appUser.userId || appUser._id;
-    const stateMachine = new StateMachine({
-        script,
-        bot: new BetterSmoochApiBot({
-            name,
-            avatarUrl,
-            lock,
-            store,
-            userId
-        })
-    });    
-
-    if(!isPostback) {
-        const messages = req.body.messages.reduce((prev, current) => {
-            if (current.role === 'appUser') {
-                prev.push(current);
-            }
-            return prev;
-        }, []);
-
-        if (messages.length === 0 && !isTrigger) {
-            return res.end();
-        }
-
-        msg = messages[0];
-    } else {
-        msg = req.body.postbacks[0];
-        msg.text = msg.action.text;
-    }
-
-    stateMachine.receiveMessage(msg)
-        .then(() => res.end())
-        .catch((err) => {
-            console.error('SmoochBot error:', err);
-            console.error(err.stack);
-            res.end();
-        });
+//----------------------------------------------------------------	
 });
-//---------------------------------
-
 
 //----------------------------------------------------------------
 var server = app.listen(process.env.PORT || 8000, function() {
@@ -203,5 +199,5 @@ var server = app.listen(process.env.PORT || 8000, function() {
     var port = server.address().port;
 
     console.log('Smooch Bot listening at http://%s:%s', host, port);
-}});
+});
 
