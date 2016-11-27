@@ -102,7 +102,7 @@ let messaging_events = req.body.entry[0].messaging
 	}
 	res.sendStatus(200)
 })
-}
+
 	
 //---------------------------------------------	
 function sendGenericMessage(sender) {
@@ -152,6 +152,7 @@ function sendGenericMessage(sender) {
 			console.log('Error: ', response.body.error)
 		}
 	})
+}
 }
 //----------------------------------------
     const appUser = req.body.appUser;
