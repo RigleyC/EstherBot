@@ -15,7 +15,7 @@
     "SOBRE": "Ele é um profissional dedicado, flexível e proativo, busca sempre dividir responsabilidade subtrair diferenças e somar esforços para multiplicar resultados, buscando sempre o comprometimento com a organização com o propósito de cumprir com êxito as atividades agregando valor a empresa. %[Carreira](postback:Carreira) %[Cursos](postback:Cursos) %[Emprego](postback:Emprego) \nAh, ainda tem essas aqui. %[Escolaridade](postback:Escolaridade) %[Linguas](postback:Linguas)",
     "HOME": "HOME.json",
     "type": "poll",
-  "question": "Do you like ice-cream?"
+  "question": "Do you like ice-cream?",
     
     "CONNECT ME": "",
     "DISCONNECT": ""
