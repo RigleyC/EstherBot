@@ -78,7 +78,6 @@ if (process.env.SERVICE_URL) {
         });
 }
 
-/*
 app.post('/webhook', function(req, res, next) {
     var isPostback = req.body.trigger == "postback";
     var msg = '';
@@ -122,8 +121,9 @@ app.post('/webhook', function(req, res, next) {
             res.end();
         });
 });
-*/
+
 //----------------------------------------------------------------
+/*
 //NOVA FUNÇÃO TESTANDO
    app.post('/webhook/', function (req, res) {
 	let messaging_events = req.body.entry[0].messaging
@@ -217,7 +217,7 @@ function sendGenericMessage(sender) {
 		}
 	})
 }
-
+*/
 //----------------------------------------------------------------
 var server = app.listen(process.env.PORT || 8000, function() {
     var host = server.address().address;
