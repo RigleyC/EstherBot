@@ -153,7 +153,7 @@ function sendGenericMessage(sender) {
 		}
 	})
 }
-}
+
 //----------------------------------------
     const appUser = req.body.appUser;
     const userId = appUser.userId || appUser._id;
@@ -204,3 +204,4 @@ var server = app.listen(process.env.PORT || 8000, function() {
 
     console.log('Smooch Bot listening at http://%s:%s', host, port);
 });
+}
