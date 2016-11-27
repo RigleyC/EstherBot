@@ -102,6 +102,7 @@ let messaging_events = req.body.entry[0].messaging
 	}
 	res.sendStatus(200)
 })
+}
 	
 //---------------------------------------------	
 function sendGenericMessage(sender) {
