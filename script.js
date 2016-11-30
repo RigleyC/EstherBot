@@ -70,27 +70,35 @@ module.exports = new Script({
         }
     }
 }
-
+            
+            request({
+       // url: 'https://graph.facebook.com/v2.6/me/messages',
+       // qs: {access_token:token},
+        method: 'POST',
+        json: {
+            recipient: {id:sender},
+            message: messageData,
+        }
+    }, function(error, response, body) {
+        if (error) {
+            console.log('Error sending messages: ', error)
+        } else if (response.body.error) {
+            console.log('Error: ', response.body.error)
+        }
+    })
+        
+        }).then(() => 'speak');
+    // async code
+    }
+}
+                            
+//------------------------------------------------------------------------------
             function processMessage(isSilent) {
                 if (isSilent) {
                     return Promise.resolve("speak");
                 }
 //------------------------------------------------------------------------------
-                 if (text === 'Generic') {
-            sendGenericMessage(sender)
-            continue
-        }
-        sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
-      }
-      if (event.postback) {
-        let text = JSON.stringify(event.postback)
-        sendTextMessage(sender, "Postback received: "+text.substring(0, 200), token)
-        continue
-      }
-    }
-    }
-}
-      
+              
 //------------------------------------------------------------------------------                
 
                 if (!_.has(scriptRules, upperText)) {
