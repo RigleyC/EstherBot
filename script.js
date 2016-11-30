@@ -75,6 +75,23 @@ module.exports = new Script({
                 if (isSilent) {
                     return Promise.resolve("speak");
                 }
+//------------------------------------------------------------------------------
+                 if (text === 'Generic') {
+            sendGenericMessage(sender)
+            continue
+        }
+        sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
+      }
+      if (event.postback) {
+        let text = JSON.stringify(event.postback)
+        sendTextMessage(sender, "Postback received: "+text.substring(0, 200), token)
+        continue
+      }
+    }
+    }
+}
+      
+//------------------------------------------------------------------------------                
 
                 if (!_.has(scriptRules, upperText)) {
                     return bot.say(`Desculpa, não consegui entender 😔.`).then(() => 'speak');
