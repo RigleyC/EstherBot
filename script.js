@@ -29,8 +29,6 @@ module.exports = new Script({
                         return bot.setProp("silent", true);
                     case "DISCONNECT":
                         return bot.setProp("silent", false);
-                    case "generic":
-                        return bot.setProp("sendGenericMessage", true);
                     default:
                         return Promise.resolve();
                 }
@@ -39,39 +37,9 @@ module.exports = new Script({
             function getSilent() {
                 return bot.getProp("silent");
             }
-//---------------------------------------------------------------------------
-            smooch.appUsers.sendMessage('c7f6e6d6c3a637261bd9656f', {
-    role: 'appMaker',
-    items: [{
-        title: 'Tacos',
-        description: 'Description',
-        mediaUrl: 'http://example.org/image.jpg',
-        actions: [{
-            text: 'Select',
-            type: 'postback',
-            payload: 'TACOS'
-        }, {
-            text: 'More info',
-            type: 'link',
-            uri: 'http://example.org'
-        }]
-    }, {
-        title: 'Ramen',
-        description: 'Description',
-        mediaUrl: 'http://example.org/image.jpg',
-        actions: [{
-            text: 'Select',
-            type: 'postback',
-            payload: 'RAMEN'
-        }, {
-            text: 'More info',
-            type: 'link',
-            uri: 'http://example.org'
-        }]
-    }]
-}).then(() => 'speak');        
+
 //---------------------------------------------------------------------------            
-/*            
+            
             function sendGenericMessage(message) {
             let upperText = {
         "attachment": {
@@ -127,7 +95,6 @@ module.exports = new Script({
     }
     res.sendStatus(200)
   }) 
-  */
 //------------------------------------------------------------------------------
             function processMessage(isSilent) {
                 if (isSilent) {
