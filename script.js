@@ -39,7 +39,7 @@ module.exports = new Script({
             }
 
 //---------------------------------------------------------------------------            
-            
+/*            
             function sendGenericMessage(message) {
             let upperText = {
         "attachment": {
@@ -95,7 +95,9 @@ module.exports = new Script({
     }
     res.sendStatus(200)
   }) 
+  */
 //------------------------------------------------------------------------------
+        
             function processMessage(isSilent) {
                 if (isSilent) {
                     return Promise.resolve("speak");
