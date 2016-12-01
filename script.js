@@ -37,8 +37,8 @@ module.exports = new Script({
             function getSilent() {
                 return bot.getProp("silent");
             }
-            function sendGenericMessage(sender) {
-    let messageData = {
+            function sendGenericMessage(message) {
+            let upperText = {
         "attachment": {
             "type": "template",
             "payload": {
