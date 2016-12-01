@@ -30,7 +30,7 @@ module.exports = new Script({
                     case "DISCONNECT":
                         return bot.setProp("silent", false);
                     case "generic":
-                        return bot.setProp("message", true);
+                        return bot.setProp("sendGenericMessage", true);
                     default:
                         return Promise.resolve();
                 }
