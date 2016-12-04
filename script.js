@@ -38,7 +38,15 @@ module.exports = new Script({
                 return bot.getProp("silent");
             }
 
-//---------------------------------------------------------------------------            
+//---------------------------------------------------------------------------
+ if (event.message && event.message.text) { 
+			let text = event.message.text
+			if (text === 'Generic') {
+				sendGenericMessage(sender)
+            }
+}
+//--------------------------------------------------------        
+            
             
             function sendGenericMessage(sender) {
 	        let messageData = {
