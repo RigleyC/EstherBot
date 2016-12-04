@@ -39,7 +39,7 @@ module.exports = new Script({
             }
 
 //---------------------------------------------------------------------------
-			if (message.text.trim() === 'Generic') {
+			if (message.text === 'Generic') {
 				sendGenericMessage()
             }
 //--------------------------------------------------------        
