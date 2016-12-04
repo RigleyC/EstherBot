@@ -143,12 +143,13 @@ app.post('/webhook', function(req, res, next) {
             return res.end();
         }
 //--------------------------------------------------------
-if (event.message && event.message.text) {
+/* if (event.message && event.message.text) { 
 			let text = event.message.text
 			if (text === 'Generic') {
 				sendGenericMessage(sender)
             }
 }
+*/
 //--------------------------------------------------------        
 
         msg = messages[0];
