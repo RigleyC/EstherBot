@@ -83,10 +83,10 @@ if (process.env.SERVICE_URL) {
 }
 //-------------------------------------------------------------------------------------
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({extended: false}));
+//app.use(bodyParser.urlencoded({extended: false}));
 
 // parse application/json
-app.use(bodyParser.json());
+//app.use(bodyParser.json());
 //-------------------------------------------------------------------------------------
 
 app.post('/webhook', function(req, res, next) {
