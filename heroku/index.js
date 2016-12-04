@@ -156,8 +156,9 @@ app.post('/webhook', function(req, res, next) {
             console.error(err.stack);
             res.end();
         });
-//});
+});
 //----------------------------------------------------------------
+/*
 if (event.message && event.message.text) {
 			let text = event.message.text
 			if (text === 'Generic') {
@@ -174,6 +175,7 @@ if (event.message && event.message.text) {
 	//}
 	res.sendStatus(200)
     });
+    */
 //----------------------------------------------------------------
 var server = app.listen(process.env.PORT || 8000, function() {
     var host = server.address().address;
