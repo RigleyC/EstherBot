@@ -39,12 +39,9 @@ module.exports = new Script({
             }
 
 //---------------------------------------------------------------------------
- if (event.message && event.message.text) { 
-			let text = event.message.text
 			if (text === 'Generic') {
 				sendGenericMessage(sender)
             }
-}
 //--------------------------------------------------------        
             
             
