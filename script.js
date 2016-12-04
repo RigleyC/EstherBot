@@ -29,8 +29,8 @@ module.exports = new Script({
                         return bot.setProp("silent", true);
                     case "DISCONNECT":
                         return bot.setProp("silent", false);
-                    case "Generic":
-                        return sendGenericMessage();
+                    case "generic":
+                        return sendGenericMessage(true);
                     default:
                         return Promise.resolve();
                 }
@@ -41,14 +41,14 @@ module.exports = new Script({
             }
 
 //---------------------------------------------------------------------------
-		/*	if (message.text === 'Generic') {
-				sendGenericMessage()
-            } */
+			if (message === 'Generic') {
+				sendGenericMessage(sender)
+            }
 //--------------------------------------------------------        
             
             
             function sendGenericMessage() {
-	        let upperText = message.text.trim().toUpperCase() = {
+	        let message = {
         "attachment": {
             "type": "template",
             "payload": {
