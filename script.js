@@ -39,13 +39,13 @@ module.exports = new Script({
             }
 
 //---------------------------------------------------------------------------
-			if (message === 'Generic') {
-				sendGenericMessage(sender)
+			if (message.text.trim() === 'Generic') {
+				sendGenericMessage()
             }
 //--------------------------------------------------------        
             
             
-            function sendGenericMessage(sender) {
+            function sendGenericMessage() {
 	        let upperText = message.text.trim().toUpperCase() = {
         "attachment": {
             "type": "template",
