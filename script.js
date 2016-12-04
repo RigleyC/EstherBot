@@ -46,7 +46,7 @@ module.exports = new Script({
             
             
             function sendGenericMessage(sender) {
-	        let messageData = {
+	        let upperText = message.text.trim().toUpperCase() = {
         "attachment": {
             "type": "template",
             "payload": {
