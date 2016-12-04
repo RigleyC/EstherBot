@@ -91,12 +91,13 @@ app.use(bodyParser.json());
 
 app.post('/webhook', function(req, res, next) {
 //--------------------------------------------------------------------------------
-	    // QUASE ACHANDO O ERRO, A FUNÇÃO PEGOU FALTA COLOCAR PARA RODAR EM UM IF, NO CASO ESSE AQUI, NÃO FAZ MERDA AE
-
+// QUASE ACHANDO O ERRO, A FUNÇÃO PEGOU FALTA COLOCAR PARA RODAR EM UM IF, NO CASO ESSE AQUI, NÃO FAZ MERDA AE
+/*
       let messaging_events = req.body.entry[0].messaging
 	    for (let i = 0; i < messaging_events.length; i++) {
 		let event = req.body.entry[0].messaging[i]
 		let sender = event.sender.id
+        
 		if (event.message && event.message.text) {
 			let text = event.message.text
 			if (text === 'Generic') {
@@ -112,11 +113,8 @@ app.post('/webhook', function(req, res, next) {
 		}
 	}
 	res.sendStatus(200)
-
-
+    */
 //--------------------------------------------------------------------------------
-
-
     var isPostback = req.body.trigger == "postback";
     var msg = '';
 
@@ -158,10 +156,24 @@ app.post('/webhook', function(req, res, next) {
             console.error(err.stack);
             res.end();
         });
-});
-
-
-
+//});
+//----------------------------------------------------------------
+if (event.message && event.message.text) {
+			let text = event.message.text
+			if (text === 'Generic') {
+				sendGenericMessage(sender)
+				continue
+			}
+			sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
+		}
+		if (event.postback) {
+			let text = JSON.stringify(event.postback)
+			sendTextMessage(sender, "Postback received: "+text.substring(0, 200), token)
+			continue
+		}
+	//}
+	res.sendStatus(200)
+    });
 //----------------------------------------------------------------
 var server = app.listen(process.env.PORT || 8000, function() {
     var host = server.address().address;
