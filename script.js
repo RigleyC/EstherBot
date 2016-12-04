@@ -29,6 +29,8 @@ module.exports = new Script({
                         return bot.setProp("silent", true);
                     case "DISCONNECT":
                         return bot.setProp("silent", false);
+                    case "Generic":
+                        return sendGenericMessage();
                     default:
                         return Promise.resolve();
                 }
@@ -39,9 +41,9 @@ module.exports = new Script({
             }
 
 //---------------------------------------------------------------------------
-			if (message.text === 'Generic') {
+		/*	if (message.text === 'Generic') {
 				sendGenericMessage()
-            }
+            } */
 //--------------------------------------------------------        
             
             
