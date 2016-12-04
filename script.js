@@ -41,9 +41,11 @@ module.exports = new Script({
             }
 
 //---------------------------------------------------------------------------
-			if (message === 'Generic') {
-				sendGenericMessage(sender)
+		/*
+        	if (message === 'Generic') {
+				sendGenericMessage()
             }
+            */
 //--------------------------------------------------------        
             
             
