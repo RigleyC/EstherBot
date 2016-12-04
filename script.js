@@ -48,7 +48,7 @@ module.exports = new Script({
             }
             */
 //--------------------------------------------------------        
-            
+/*            
             
             function sendGenericMessage() {
 	        let message = {
@@ -83,6 +83,7 @@ module.exports = new Script({
         }
     }
 }
+*/
 //------------------------------------------------------------------------------
         
             function processMessage(isSilent) {
