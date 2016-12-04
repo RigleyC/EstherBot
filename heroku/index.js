@@ -11,6 +11,8 @@ const SmoochCore = require('smooch-core');
 const jwt = require('../jwt');
 const fs = require('fs');
 //------------------------------------
+const bodyParser = require('body-parser');
+//------------------------------------
 
 
 class BetterSmoochApiBot extends SmoochApiBot {
@@ -79,6 +81,13 @@ if (process.env.SERVICE_URL) {
             }
         });
 }
+//-------------------------------------------------------------------------------------
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({extended: false}));
+
+// parse application/json
+app.use(bodyParser.json());
+//-------------------------------------------------------------------------------------
 
 app.post('/webhook', function(req, res, next) {
     var isPostback = req.body.trigger == "postback";
@@ -110,24 +119,28 @@ app.post('/webhook', function(req, res, next) {
         }
 //--------------------------------------------------------------------------------
 	    // QUASE ACHANDO O ERRO, A FUNÇÃO PEGOU FALTA COLOCAR PARA RODAR EM UM IF, NO CASO ESSE AQUI, NÃO FAZ MERDA AE
-/*
-      if (event.message && event.message.text) {
-        let text = event.message.text
-        if (text === 'Generic') {
-            sendGenericMessage(sender)
-            continue
-        }
-        sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
-      }
-      if (event.postback) {
-        let text = JSON.stringify(event.postback)
-        sendTextMessage(sender, "Postback received: "+text.substring(0, 200), token)
-        continue
-      }
-    }
-    res.sendStatus(200)
-  })
-*/
+
+      let messaging_events = req.body.entry[0].messaging
+	for (let i = 0; i < messaging_events.length; i++) {
+		let event = req.body.entry[0].messaging[i]
+		let sender = event.sender.id
+		if (event.message && event.message.text) {
+			let text = event.message.text
+			if (text === 'Generic') {
+				sendGenericMessage(sender)
+				continue
+			}
+			sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
+		}
+		if (event.postback) {
+			let text = JSON.stringify(event.postback)
+			sendTextMessage(sender, "Postback received: "+text.substring(0, 200), token)
+			continue
+		}
+	}
+	res.sendStatus(200)
+
+
 //--------------------------------------------------------------------------------	    
 
         msg = messages[0];
