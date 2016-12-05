@@ -83,38 +83,14 @@ if (process.env.SERVICE_URL) {
 }
 //-------------------------------------------------------------------------------------
 // parse application/x-www-form-urlencoded
-//app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({extended: false}));
 
 // parse application/json
-//app.use(bodyParser.json());
+app.use(bodyParser.json());
 //-------------------------------------------------------------------------------------
-
-app.post('/webhook', function(req, res, next) {
+app.post('/',handleMessage);
 //--------------------------------------------------------------------------------
-// QUASE ACHANDO O ERRO, A FUNÇÃO PEGOU FALTA COLOCAR PARA RODAR EM UM IF, NO CASO ESSE AQUI, NÃO FAZ MERDA AE
-/*
-      let messaging_events = req.body.entry[0].messaging
-	    for (let i = 0; i < messaging_events.length; i++) {
-		let event = req.body.entry[0].messaging[i]
-		let sender = event.sender.id
-        
-		if (event.message && event.message.text) {
-			let text = event.message.text
-			if (text === 'Generic') {
-				sendGenericMessage(sender)
-				continue
-			}
-			sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
-		}
-		if (event.postback) {
-			let text = JSON.stringify(event.postback)
-			sendTextMessage(sender, "Postback received: "+text.substring(0, 200), token)
-			continue
-		}
-	}
-	res.sendStatus(200)
-    */
-//--------------------------------------------------------------------------------
+    app.post('/webhook', function(req, res, next) {
     var isPostback = req.body.trigger == "postback";
     var msg = '';
 
@@ -142,6 +118,66 @@ app.post('/webhook', function(req, res, next) {
         if (messages.length === 0 && !isTrigger) {
             return res.end();
         }
+//--------------------------------------------------------
+function sendMessage(recipientId, message) {
+    request({
+        method: 'POST',
+        json: {
+            recipient: {id: recipientId},
+            message: message,
+        }
+    }, function(error, response, body) {
+        if (error) {
+            console.log('Error sending message: ', error);
+        } else if (response.body.error) {
+            console.log('Error: ', response.body.error);
+        }
+    });
+};
+
+// send rich message with kitten
+function kittenMessage(recipientId, text) {
+    
+    text = text || "";
+    var values = text.split(' ');
+    
+    if (values.length === 3 && values[0] === 'kitten') {
+        if (Number(values[1]) > 0 && Number(values[2]) > 0) {
+            
+            var imageUrl = "https://placekitten.com/" + Number(values[1]) + "/" + Number(values[2]);
+            
+            message = {
+                "attachment": {
+                    "type": "template",
+                    "payload": {
+                        "template_type": "generic",
+                        "elements": [{
+                            "title": "Kitten",
+                            "subtitle": "Cute kitten picture",
+                            "image_url": imageUrl ,
+                            "buttons": [{
+                                "type": "web_url",
+                                "url": imageUrl,
+                                "title": "Show kitten"
+                                }, {
+                                "type": "postback",
+                                "title": "I like this",
+                                "payload": "User " + recipientId + " likes kitten " + imageUrl,
+                            }]
+                        }]
+                    }
+                }
+            };
+    
+            sendMessage(recipientId, message);
+            
+            return true;
+        }
+    }
+    
+    return false;
+    
+};
 //--------------------------------------------------------
 /* if (event.message && event.message.text) { 
 			let text = event.message.text
