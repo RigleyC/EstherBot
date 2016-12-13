@@ -21,7 +21,7 @@ module.exports = new Script({
 	start2: {
 	receive: (bot, message) => {
 		const name = message.text;
-		if (message.text == "rig") {
+		if (message.text == 'rig') {
 		return bot.say({
                 'type': 'template',
                 'payload': {
