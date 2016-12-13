@@ -18,11 +18,11 @@ module.exports = new Script({
         }
     },
 //----------------------------------------------------------------------------------------------------------
-	start2: {
-	receive: (bot, message) => {
-		const name = message.text;
-		if (message.text == 'rig') {
-		return bot.say({
+    start2: {
+    receive: (bot, message) => {
+        const name = message.text;
+        if (message.text == 'rig') {
+        return bot.say({
                 'type': 'template',
                 'payload': {
                     'template_type': 'generic',
@@ -73,14 +73,15 @@ module.exports = new Script({
                         }
                     ]
                 }
-		}
-			       }
-			       )
-		
-		 .then(() => 'speak');
-		}
-    },   
-			       
+        }
+    }
+                   )
+        
+         .then(() => 'speak');
+    }
+        },   
+   
+		       
 //----------------------------------------------------------------------------------------------------------	
 
     speak: {
