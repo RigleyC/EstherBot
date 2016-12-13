@@ -96,6 +96,8 @@ module.exports = new Script({
                         return bot.setProp("silent", true);
                     case "DISCONNECT":
                         return bot.setProp("silent", false);
+                    case "rig":
+                    return bot.say(start2);
                     default:
                         return Promise.resolve();
                 }
