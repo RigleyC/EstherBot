@@ -97,7 +97,7 @@ module.exports = new Script({
                     case "DISCONNECT":
                         return bot.setProp("silent", false);
                     case "rig":
-                    return bot.say(start2);
+                        return bot.setProp("silent", true);
                     default:
                         return Promise.resolve();
                 }
@@ -155,6 +155,7 @@ module.exports = new Script({
             function processMessage(isSilent) {
                 if (isSilent) {
                     return Promise.resolve("speak");
+                    return Promise.resolve("start2");
                 }
 //------------------------------------------------------------------------------
               
