@@ -74,7 +74,7 @@ module.exports = new Script({
                     ]
                 }
         }
-    }
+    //}
                    )
         
          .then(() => 'speak');
