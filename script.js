@@ -19,7 +19,9 @@ module.exports = new Script({
     },
 //----------------------------------------------------------------------------------------------------------
 	start2: {
-	receive: (bot) => {
+	receive: (bot, message) => {
+		const name = message.text;
+		if (message.text == "rig") {
 		return bot.say({
                 'type': 'template',
                 'payload': {
@@ -72,7 +74,9 @@ module.exports = new Script({
                     ]
                 }
 		}
+			       }
 			       )
+		
 		 .then(() => 'speak');
 		}
     },   
