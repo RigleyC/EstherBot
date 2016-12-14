@@ -18,54 +18,6 @@ module.exports = new Script({
         }
     },
 //----------------------------------------------------------------------------------------------------------
-start2: {
-    receive: (bot, message) => {
-        const name = message.text;
-        if (message.text == 'rig') {
-        return bot.say({
-           //var catalogue = {
-              "type": "catalogue",
-              "msgid": "cat_212",
-              "items": [
-                {
-                  "title": "White T Shirt",
-                 "subtitle": "Soft cotton t-shirt \nXs, S, M, L \n$10",
-                  "imgurl": "http://petersapparel.parseapp.com/img/item100-thumb.png",
-                  "options":[
-                    {
-                      "type":"url",
-                      "title":"View Details",
-                      "url":"http://petersapparel.parseapp.com/img/item100-thumb.png"
-                    },
-                     {
-                      "type":"text",
-                      "title":"Buy"
-                     }
-                   ]
-                },
-                {
-                  "title": "Grey T Shirt",
-                  "subtitle": "Soft cotton t-shirt \nXs, S, M, L \n$12",
-                  "imgurl": "http://petersapparel.parseapp.com/img/item101-thumb.png",
-                  "options":[
-                    {
-                      "type":"url",
-                      "title":"View Details",
-                      "url":"http://petersapparel.parseapp.com/img/item101-thumb.png"
-                    },
-                     {
-                      "type":"text",
-                      "title":"Buy"
-                     }
-                    ]
-                  }
-                ]
-        });
-        context.sendResponse(JSON.stringify(catalogue));
-        return;
-        }
-    } 
-        },
 //----------------------------------------------------------------------------------------------------------
 /*
     start2: {
