@@ -18,11 +18,63 @@ module.exports = new Script({
         }
     },
 //----------------------------------------------------------------------------------------------------------
+start2: {
+    receive: (bot, message) => {
+        const name = message.text;
+        if (message.text == 'rig') {
+        return bot.say({
+           //var catalogue = {
+              "type": "catalogue",
+              "msgid": "cat_212",
+              "items": [
+                {
+                  "title": "White T Shirt",
+                 "subtitle": "Soft cotton t-shirt \nXs, S, M, L \n$10",
+                  "imgurl": "http://petersapparel.parseapp.com/img/item100-thumb.png",
+                  "options":[
+                    {
+                      "type":"url",
+                      "title":"View Details",
+                      "url":"http://petersapparel.parseapp.com/img/item100-thumb.png"
+                    },
+                     {
+                      "type":"text",
+                      "title":"Buy"
+                     }
+                   ]
+                },
+                {
+                  "title": "Grey T Shirt",
+                  "subtitle": "Soft cotton t-shirt \nXs, S, M, L \n$12",
+                  "imgurl": "http://petersapparel.parseapp.com/img/item101-thumb.png",
+                  "options":[
+                    {
+                      "type":"url",
+                      "title":"View Details",
+                      "url":"http://petersapparel.parseapp.com/img/item101-thumb.png"
+                    },
+                     {
+                      "type":"text",
+                      "title":"Buy"
+                     }
+                    ]
+                  }
+                ]
+        });
+        context.sendResponse(JSON.stringify(catalogue));
+        return;
+        }
+    } 
+        },
+//----------------------------------------------------------------------------------------------------------
+/*
     start2: {
     receive: (bot, message) => {
         const name = message.text;
         if (message.text == 'rig') {
         return bot.say({
+            
+            "attachment": {
                 'type': 'template',
                 'payload': {
                     'template_type': 'generic',
@@ -74,6 +126,7 @@ module.exports = new Script({
                     ]
                 }
         }
+        }
                    )
         
          .then(() => 'speak');
@@ -82,7 +135,7 @@ module.exports = new Script({
     }
         },   
    
-		       
+*/		       
 //----------------------------------------------------------------------------------------------------------	
 
     speak: {
@@ -107,49 +160,7 @@ module.exports = new Script({
                 return bot.getProp("silent");
             }
 
-//---------------------------------------------------------------------------
-		/*
-        	if (message === 'Generic') {
-				sendGenericMessage()
-            }
-            */
-//--------------------------------------------------------        
-/*            
-            
-            function sendGenericMessage() {
-	        let message = {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "generic",
-                "elements": [{
-                    "title": "First card",
-                    "subtitle": "Element #1 of an hscroll",
-                    "image_url": "http://messengerdemo.parseapp.com/img/rift.png",
-                    "buttons": [{
-                        "type": "web_url",
-                        "url": "https://www.messenger.com",
-                        "title": "web url"
-                    }, {
-                        "type": "postback",
-                        "title": "Postback",
-                        "payload": "Payload for first element in a generic bubble",
-                    }],
-                }, {
-                    "title": "Second card",
-                    "subtitle": "Element #2 of an hscroll",
-                    "image_url": "http://messengerdemo.parseapp.com/img/gearvr.png",
-                    "buttons": [{
-                        "type": "postback",
-                        "title": "Postback",
-                        "payload": "Payload for second element in a generic bubble",
-                    }],
-                }]
-            }
-        }
-    }
-}
-*/
+
 //------------------------------------------------------------------------------
         
             function processMessage(isSilent) {
