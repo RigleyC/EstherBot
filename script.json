@@ -14,7 +14,49 @@
     "ESCOLARIDADE": "Bom ele sempre gostou de ler, sempre foi muito curioso e com a influência dos pais que são professores isso acabou ficando mais forte e consequentemente ele acabou o Ensino Médio aos 14 anos e logo em seguida entrou logo na faculdade no curso de Gestão de T.I. \nEscolha outra categoria abaixo 🙂: %[Carreira](postback:Carreira) %[Cursos](postback:Cursos) %[Emprego](postback:Emprego) \nAh, ainda tem essa aqui. %[Linguas](postback:Linguas) %[Sobre](postback:Sobre) \n Ao acabar basta dizer TCHAU 🙂",
     "SOBRE": "Ele é um profissional dedicado, flexível e proativo, busca sempre dividir responsabilidade subtrair diferenças e somar esforços para multiplicar resultados, buscando sempre o comprometimento com a organização com o propósito de cumprir com êxito as atividades agregando valor a empresa. %[Carreira](postback:Carreira) %[Cursos](postback:Cursos) %[Emprego](postback:Emprego) \nAh, ainda tem essas aqui. %[Escolaridade](postback:Escolaridade) %[Linguas](postback:Linguas)",
     "HOME": "HOME.json",
-    "rig": "",
+    "rig": {
+  "message": {
+    "_id": "57966d21c19c9da00839a5e9",
+    "role": "appMaker",
+    "type": "carousel",
+    "items": [{
+        "_id": "57966d21c19c9da00839a5ea",
+        "title": "Tacos",
+        "description": "Description",
+        "mediaUrl": "http://example.org/image.jpg",
+        "mediaType": "image/jpeg",
+        "actions": [{
+            "_id": "57966d22c19c9da00839a5eb",
+            "text": "Select",
+            "type": "postback",
+            "payload": "TACOS"
+        }, {
+            "_id": "57966d22c19c9da00839a5ec",
+            "text": "More info",
+            "type": "link",
+            "uri": "http://example.org"
+        }]
+    }, {
+        "_id": "57966d22c19c9da00839a5ed",
+        "title": "Ramen",
+        "description": "Description",
+        "mediaUrl": "http://example.org/image.jpg",
+        "mediaType": "image/jpeg",
+        "actions": [{
+            "_id": "57966d31c19c9da00839a5ee",
+            "text": "Select",
+            "type": "postback",
+            "payload": "RAMEN"
+        }, {
+            "_id": "57966d31c19c9da00839a5ef",
+            "text": "More info",
+            "type": "link",
+            "uri": "http://example.org"
+        }]
+    }]
+  }
+},
+
     
     "CONNECT ME": "",
     "DISCONNECT": "bye"
