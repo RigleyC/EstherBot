@@ -1,11 +1,11 @@
 {
-    "OI": "Oi, tudo bem? \nMeu nome é RigleyBot. Fui criado para ajudar você a conhecer Rigley melhor. Então vamos começar! Escolha uma categoria abaixo: %[Carreira](postback:Carreira) %[Cursos](postback:Cursos) %[Emprego](postback:Emprego) \nAh, ainda tem essas aqui. %[Escolaridade](postback:Escolaridade) %[Linguas](postback:Linguas) %[Sobre](postback:Sobre) \n Ao acabar basta dizer TCHAU 🙂",
-    "OLA": "Oi, tudo bem? \nMeu nome é RigleyBot. Fui criado para ajudar você a conhecer Rigley melhor. Então vamos começar! Escolha uma categoria abaixo: %[Carreira](postback:Carreira) %[Cursos](postback:Cursos) %[Emprego](postback:Emprego) \nAh, ainda tem essas aqui. %[Escolaridade](postback:Escolaridade) %[Linguas](postback:Linguas) %[Sobre](postback:Sobre)",
-    "OLA RIGLEY": "Oi, tudo bem? \nMeu nome é RigleyBot. Fui criado para ajudar você a conhecer Rigley melhor. Então vamos começar! Escolha uma categoria abaixo: %[Carreira](postback:Carreira) %[Cursos](postback:Cursos) %[Emprego](postback:Emprego) \nAh, ainda tem essas aqui. %[Escolaridade](postback:Escolaridade) %[Linguas](postback:Linguas) %[Sobre](postback:Sobre)",
-    "OI, TUDO BEM?": "Oi, tudo bem? \nMeu nome é RigleyBot. Fui criado para ajudar você a conhecer Rigley melhor. Então vamos começar! Escolha uma categoria abaixo: %[Carreira](postback:Carreira) %[Cursos](postback:Cursos) %[Emprego](postback:Emprego) \nAh, ainda tem essas aqui. %[Escolaridade](postback:Escolaridade) %[Linguas](postback:Linguas) %[Sobre](postback:Sobre)",
-    "OI RIGLEY": "Oi, tudo bem? \nMeu nome é RigleyBot. Fui criado para ajudar você a conhecer Rigley melhor. Então vamos começar! Escolha uma categoria abaixo: %[Carreira](postback:Carreira) %[Cursos](postback:Cursos) %[Emprego](postback:Emprego) \nAh, ainda tem essas aqui. %[Escolaridade](postback:Escolaridade) %[Linguas](postback:Linguas) %[Sobre](postback:Sobre)",
-    "OLÁ": "Oi, tudo bem? \nMeu nome é RigleyBot. Fui criado para ajudar você a conhecer Rigley melhor. Então vamos começar! Escolha uma categoria abaixo: %[Carreira](postback:Carreira) %[Cursos](postback:Cursos) %[Emprego](postback:Emprego) \nAh, ainda tem essas aqui. %[Escolaridade](postback:Escolaridade) %[Linguas](postback:Linguas) %[Sobre](postback:Sobre)",
-    "OI RIGLEY!": "Oi, tudo bem? \nMeu nome é RigleyBot. Fui criado para ajudar você a conhecer Rigley melhor. Então vamos começar! Escolha uma categoria abaixo: %[Carreira](postback:Carreira) %[Cursos](postback:Cursos) %[Emprego](postback:Emprego) \nAh, ainda tem essas aqui. %[Escolaridade](postback:Escolaridade) %[Linguas](postback:Linguas) %[Sobre](postback:Sobre)",
+    "OI": "Oi, tudo bem? \nMeu nome é RigleyBot. Fui criado para ajudar você a conhecer Rigley melhor. Então vamos começar! Escolha uma categoria abaixo: \n▪️ SOBRE \n▪️ CURSOS \n▪️️ EDUCACAO \n▪️ LINGUAS \n▪️ EMPREGO \n▪️ CARREIRA \nAo acabar basta dizer TCHAU 🙂",
+    "OLA": "Oi, tudo bem? \nMeu nome é RigleyBot. Fui criado para ajudar você a conhecer Rigley melhor. Então vamos começar! Escolha uma categoria abaixo:" ,
+    "OLA RIGLEY": "Oi, tudo bem? \nMeu nome é RigleyBot. Fui criado para ajudar você a conhecer Rigley melhor. Então vamos começar! Escolha uma categoria abaixo:" ,
+    "OI, TUDO BEM?": "Oi, tudo bem? \nMeu nome é RigleyBot. Fui criado para ajudar você a conhecer Rigley melhor. Então vamos começar! Escolha uma categoria abaixo:" ,
+    "OI RIGLEY": "Oi, tudo bem? \nMeu nome é RigleyBot. Fui criado para ajudar você a conhecer Rigley melhor. Então vamos começar! Escolha uma categoria abaixo:" ,
+    "OLÁ": "Oi, tudo bem? \nMeu nome é RigleyBot. Fui criado para ajudar você a conhecer Rigley melhor. Então vamos começar! Escolha uma categoria abaixo:" ,
+    "OI RIGLEY!": "Oi, tudo bem? \nMeu nome é RigleyBot. Fui criado para ajudar você a conhecer Rigley melhor. Então vamos começar! Escolha uma categoria abaixo:" ,
     "TCHAU": "Até mais! Espero que tenha gostado da nossa conversa. 👋🙂",
     "CARREIRA": "Bom, é um pouco complicado falar disso, como falo na educação ele é novo e isso complica conseguir emprego, uma das poucas experiências que ele teve foi como Monitor de Informática na escola onde fez Ensino Médio, atualmente ele apenas estuda na faculdade Devry São Luís. \nEscolha outra categoria abaixo 🙂: %[Cursos](postback:Cursos) %[Emprego](postback:Emprego) %[Sobre](postback:Sobre) \nAh, ainda tem essas aqui. %[Escolaridade](postback:Escolaridade) %[Linguas](postback:Linguas)  \n Ao acabar basta dizer TCHAU 🙂",
     "CURSOS": "Como ele não trabalha acaba sobrando um tempo livre então ele procura fazer cursos e está sempre pesquisando novidades na área de T.I. \nHoje ele tem cursos de: \n - Gestão de Riscos em T.I. \n- ITIL - Introdução a Biblioteca.\n- Fundamentos de Redes.\n- Montagem e Manutenção de Computadores. \nEscolha outra categoria abaixo 🙂: %[Carreira](postback:Carreira) %[Emprego](postback:Emprego) %[Sobre](postback:Sobre) \nAh, ainda tem essas aqui. %[Escolaridade](postback:Escolaridade) %[Linguas](postback:Linguas) \n Ao acabar basta dizer TCHAU 🙂",
@@ -13,49 +13,6 @@
     "EMPREGO": "Bom, é um pouco complicado falar disso, como falo na educação ele é novo e isso complica conseguir emprego, uma das poucas experiências que ele teve foi como Monitor de Informática na escola onde fez Ensino Médio, atualmente ele apenas estuda na faculdade Devry São Luís. \nEscolha outra categoria abaixo 🙂: %[Carreira](postback:Carreira) %[Cursos](postback:Cursos) %[Sobre](postback:Sobre) \nAh, ainda tem essas aqui. %[Escolaridade](postback:Escolaridade) %[Linguas](postback:Linguas) \n Ao acabar basta dizer TCHAU 🙂",
     "ESCOLARIDADE": "Bom ele sempre gostou de ler, sempre foi muito curioso e com a influência dos pais que são professores isso acabou ficando mais forte e consequentemente ele acabou o Ensino Médio aos 14 anos e logo em seguida entrou logo na faculdade no curso de Gestão de T.I. \nEscolha outra categoria abaixo 🙂: %[Carreira](postback:Carreira) %[Cursos](postback:Cursos) %[Emprego](postback:Emprego) \nAh, ainda tem essa aqui. %[Linguas](postback:Linguas) %[Sobre](postback:Sobre) \n Ao acabar basta dizer TCHAU 🙂",
     "SOBRE": "Ele é um profissional dedicado, flexível e proativo, busca sempre dividir responsabilidade subtrair diferenças e somar esforços para multiplicar resultados, buscando sempre o comprometimento com a organização com o propósito de cumprir com êxito as atividades agregando valor a empresa. %[Carreira](postback:Carreira) %[Cursos](postback:Cursos) %[Emprego](postback:Emprego) \nAh, ainda tem essas aqui. %[Escolaridade](postback:Escolaridade) %[Linguas](postback:Linguas)",
-    "HOME": "HOME.json",
-    "rig": {
-  "message": {
-    "_id": "57966d21c19c9da00839a5e9",
-    "role": "appMaker",
-    "type": "carousel",
-    "items": [{
-        "_id": "57966d21c19c9da00839a5ea",
-        "title": "Tacos",
-        "description": "Description",
-        "mediaUrl": "http://example.org/image.jpg",
-        "mediaType": "image/jpeg",
-        "actions": [{
-            "_id": "57966d22c19c9da00839a5eb",
-            "text": "Select",
-            "type": "postback",
-            "payload": "TACOS"
-        }, {
-            "_id": "57966d22c19c9da00839a5ec",
-            "text": "More info",
-            "type": "link",
-            "uri": "http://example.org"
-        }]
-    }, {
-        "_id": "57966d22c19c9da00839a5ed",
-        "title": "Ramen",
-        "description": "Description",
-        "mediaUrl": "http://example.org/image.jpg",
-        "mediaType": "image/jpeg",
-        "actions": [{
-            "_id": "57966d31c19c9da00839a5ee",
-            "text": "Select",
-            "type": "postback",
-            "payload": "RAMEN"
-        }, {
-            "_id": "57966d31c19c9da00839a5ef",
-            "text": "More info",
-            "type": "link",
-            "uri": "http://example.org"
-        }]
-    }]
-  }
-},
 
     
     "CONNECT ME": "",
