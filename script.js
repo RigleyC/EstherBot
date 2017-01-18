@@ -18,73 +18,7 @@ module.exports = new Script({
         }
     },
 //----------------------------------------------------------------------------------------------------------
-//----------------------------------------------------------------------------------------------------------
-
-    start2: {
-    receive: (bot, message) => {
-        const name = message.text;
-        if (message.text == 'rig') {
-        //return bot.say({
-           let message = {  
-            "attachment": {
-                'type': 'template',
-                'payload': {
-                    'template_type': 'generic',
-                    'elements': [
-                        {
-                            'title': 'Classic White T-Shirt',
-                            'image_url': 'http://petersapparel.parseapp.com/img/item100-thumb.png',
-                            'subtitle': 'Soft white cotton t-shirt is back in style',
-                            'buttons': [
-                                {
-                                    'type': 'web_url',
-                                    'url': 'https://petersapparel.parseapp.com/view_item?item_id=100',
-                                    'title': 'View Item'
-                                },
-                                {
-                                    'type': 'web_url',
-                                    'url': 'https://petersapparel.parseapp.com/buy_item?item_id=100',
-                                    'title': 'Buy Item'
-                                },
-                                {
-                                    'type': 'postback',
-                                    'title': 'Bookmark Item',
-                                    'payload': 'White T-Shirt'
-                                }
-                            ]
-                        },
-                        {
-                            'title': 'Classic Grey T-Shirt',
-                            'image_url': 'http://petersapparel.parseapp.com/img/item101-thumb.png',
-                            'subtitle': 'Soft gray cotton t-shirt is back in style',
-                            'buttons': [
-                                {
-                                    'type': 'web_url',
-                                    'url': 'https://petersapparel.parseapp.com/view_item?item_id=101',
-                                    'title': 'View Item'
-                                },
-                                {
-                                    'type': 'web_url',
-                                    'url': 'https://petersapparel.parseapp.com/buy_item?item_id=101',
-                                    'title': 'Buy Item'
-                                },
-                                {
-                                    'type': 'postback',
-                                    'title': 'Bookmark Item',
-                                    'payload': 'Grey T-Shirt'
-                                }
-                            ]
-                        }
-                    ]
-                }
-        }
-        }
-        
-       // ) .then(() => 'speak');    
-        }
-    }
-    
-        },   		       
+		       
 //----------------------------------------------------------------------------------------------------------	
 
     speak: {
@@ -98,8 +32,6 @@ module.exports = new Script({
                         return bot.setProp("silent", true);
                     case "DISCONNECT":
                         return bot.setProp("silent", false);
-                    case "rig":
-                        return bot.setProp("silent", true);
                     default:
                         return Promise.resolve();
                 }
@@ -115,7 +47,6 @@ module.exports = new Script({
             function processMessage(isSilent) {
                 if (isSilent) {
                     return Promise.resolve("speak");
-                    return Promise.resolve("start2");
                 }
 //------------------------------------------------------------------------------
               
