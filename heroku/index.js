@@ -123,7 +123,7 @@ app.post('/webhook', function(req, res, next) {
         }
 //-----------------------------------------------------------------------------------------
             //ESSA FUNCAO FAZ SENTIDO POR CAUSA DO JSON, NÃO SEI DEIXA ELA AE, TALVEZ PRECISE
-/*
+
 function sendMessage(recipientId, message) {
     request({
         method: 'POST',
@@ -180,10 +180,10 @@ function kittenMessage(recipientId, text) {
         }
     }
     
-    return false;
+  //  return false;
     
 };
-*/
+
 //--------------------------------------------------------
 /* if (event.message && event.message.text) { 
 			let text = event.message.text
